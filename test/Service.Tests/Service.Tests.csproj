@@ -10,8 +10,8 @@
     <ProjectGuid>{335F2693-AACB-4798-8794-1ACD98C3105C}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Service.Tests</RootNamespace>
-    <AssemblyName>Service.Tests</AssemblyName>
+    <RootNamespace>NuGet.Feed.Service.Tests</RootNamespace>
+    <AssemblyName>NuGet.Feed.Service.Tests</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <NuGetPackageImportStamp>23b80c1e</NuGetPackageImportStamp>

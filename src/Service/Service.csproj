@@ -7,8 +7,8 @@
     <ProjectGuid>{D0F56F99-F0A6-4F7A-90AF-2DB7CC5F06D0}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Service</RootNamespace>
-    <AssemblyName>Service</AssemblyName>
+    <RootNamespace>NuGet.Feed.Service</RootNamespace>
+    <AssemblyName>NuGet.Feed.Service</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
