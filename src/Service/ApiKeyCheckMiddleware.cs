@@ -12,7 +12,7 @@ namespace NuGet.Feed.Service
 
         public override Task Invoke(IOwinContext context)
         {
-            if (context.Request.Headers.Single(x => x.Key == "X-NUGET-APIKEY").Value.Single() != _key)
+            if (context.Request.Headers.Single(x => x.Key.ToUpperInvariant() == "X-NUGET-APIKEY").Value.Single() != _key)
                 context.Response.StatusCode = 401;
             return Next.Invoke(context);
         }
