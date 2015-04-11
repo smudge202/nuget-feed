@@ -1,4 +1,5 @@
-﻿using Owin;
+﻿using NuGet.Feed.Service;
+using Owin;
 
 namespace NuGet.Feed.Host
 {
@@ -7,6 +8,7 @@ namespace NuGet.Feed.Host
         public void Configuration(IAppBuilder app)
         {
             app.UseErrorPage();
+            app.UseNuGetApiCheck();
         }
     }
 }
