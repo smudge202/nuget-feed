@@ -8,23 +8,28 @@ namespace NuGet.Feed.Host
         {
             builder.UseErrorPage();
 
-            builder.MapWhen(m => m.Request.Method == "PUT", app =>
-            {
-                app.Use<Service.Middleware.ApiKeyCheck>();
-
-                app.Run(context =>
-                {
-                    context.Response.ContentType = "text/plain";
-                    return context.Response.WriteAsync("PUT something");
+            builder.Map("/api/v2/package", app => {
+                app.MapWhen(m => m.Request.Method == "PUT", config => {
+                    //check api key
+                    //validate package
+                    //statistics
+                    //persistence
                 });
+
+                app.MapWhen(m => m.Request.Method == "DELETE", config => {
+                    //check api key
+                    //statistics
+                    //persistence
+                });
+                
+                app.MapWhen(m => m.Request.Method == "GET", config => {
+                    //statistics
+                    //persistence
+                });
+
             });
 
-            builder.Run(context =>
-            {
-                context.Response.ContentType = "text/plain";
-                return context.Response.WriteAsync("Hello, world.");
-            });
-
+            builder.Map("/searchingthings", app => { });
         }
     }
 }
