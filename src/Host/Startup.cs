@@ -1,4 +1,6 @@
-﻿using Owin;
+﻿using NuGet.Feed.Service.Middleware;
+using Owin;
+using System.IO;
 
 namespace NuGet.Feed.Host
 {
@@ -14,6 +16,12 @@ namespace NuGet.Feed.Host
                     //validate package
                     //statistics
                     //persistence
+                    app.Use<PackagePersistence>();
+                    config.Run(context =>
+                    {
+                        context.Response.ContentType = "text/plain";
+                        return context.Response.WriteAsync("This was a put");
+                    });
                 });
 
                 app.MapWhen(m => m.Request.Method == "DELETE", config => {
