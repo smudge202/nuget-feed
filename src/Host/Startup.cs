@@ -1,5 +1,4 @@
-﻿using NuGet.Feed.Service;
-using Owin;
+﻿using Owin;
 
 namespace NuGet.Feed.Host
 {
@@ -11,7 +10,7 @@ namespace NuGet.Feed.Host
 
             builder.MapWhen(m => m.Request.Method == "PUT", app =>
             {
-                app.Use<AddApiKeyCheckMiddleware>();
+                app.Use<Service.Middleware.ApiKeyCheck>();
 
                 app.Run(context =>
                 {
