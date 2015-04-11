@@ -2,13 +2,13 @@
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace NuGet.Feed.Service
+namespace NuGet.Feed.Service.Middleware
 {
-    public class AddApiKeyCheckMiddleware : OwinMiddleware
+    public class ApiKeyCheck : OwinMiddleware
     {
         private const string _key = "12345";
 
-        public AddApiKeyCheckMiddleware(OwinMiddleware next) : base(next) { }
+        public ApiKeyCheck(OwinMiddleware next) : base(next) { }
 
         public override Task Invoke(IOwinContext context)
         {
