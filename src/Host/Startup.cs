@@ -8,7 +8,8 @@ namespace NuGet.Feed.Host
         public void Configuration(IAppBuilder app)
         {
             app.UseErrorPage();
-            app.UseNuGetApiCheck();
+            app.Use<AddApiKeyCheckMiddleware>();
+
         }
     }
 }
