@@ -9,9 +9,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Host", "src\Host\Host.cspro
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Service", "src\Service\Service.csproj", "{D0F56F99-F0A6-4F7A-90AF-2DB7CC5F06D0}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{585807BF-2D44-459A-B41E-5519FBC97E67}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{585807BF-2D44-459A-B41E-5519FBC97E67}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Service.Tests", "test\Service.Tests\Service.Tests.csproj", "{335F2693-AACB-4798-8794-1ACD98C3105C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Service.Tests", "tests\Service.Tests\Service.Tests.csproj", "{335F2693-AACB-4798-8794-1ACD98C3105C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
